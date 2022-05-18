@@ -1,0 +1,50 @@
+{
+    "configurations": [
+        {
+            "name": "GCC",
+            "includePath": [
+                "${workspaceFolder}/**"
+                //"E:/MySQL-8.0.25.0/mysql-connector-c-6.1.11-winx64/include",
+                //"E:/mysql++-3.3.0/lib"
+            ],
+            "defines": [
+                //这些和vs里面的预宏定义相关
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "_CONSOLE"
+                //"_GLIBCXX_HAS_GTHREADS",
+                //"_GLIBCXX_USE_C99_STDINT_TR1"
+            ],
+            "windowsSdkVersion": "10.0.19041.0",
+            "compilerPath": "E:/mingw-w64/mingw64/bin/gcc.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        },
+        {
+            "name": "GCC-POSIX",
+            "includePath": [
+                "${workspaceFolder}/**"
+                //"E:/MySQL-8.0.25.0/mysql-connector-c-6.1.11-winx64/include",
+                //"E:/mysql++-3.3.0/lib"
+            ],
+            "defines": [
+                //这些和vs里面的预宏定义相关
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "_CONSOLE"
+                //"__STDC_NO_THREADS__"
+                //"_GLIBCXX_HAS_GTHREADS",
+                //"_GLIBCXX_USE_C99_STDINT_TR1"
+            ],
+            "windowsSdkVersion": "10.0.19041.0",
+            "compilerPath": "E:/mingw-w64-posix/mingw64/bin/gcc.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

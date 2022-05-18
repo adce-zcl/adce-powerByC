@@ -1,0 +1,20 @@
+CTRL+P 打开上方命令框
+右上角可以打开二进制文件
+alt+shift+鼠标 选择矩形
+alt+shift+crtl 多行光标
+intellSense=自动补全
+alt 移动行
+F2 批量改名，主要用在代码类批量改名
+crtl+shift+[] 折叠代码，打开代码
+ctrl+, 打开设置
+ctrl+B 打开隐藏管理栏
+F11 全屏
+ctrl + KZ 狂飙代码模式 
+
+// 花式跳转
+ctrl+g          跳转到某一行
+home            光标跳转到行首
+end             光标跳转到行尾
+shift+回车      光标处换行
+shift+ctrl+回车 前插行
+ctrl+回车       后插行
