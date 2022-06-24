@@ -296,64 +296,25 @@ tcpdump -i eth1 ‘((tcp) and ((dst net 172.16) and (not dst host 192.168.1.200)
 tcpdump -i eth1 host 172.16.7.206 and port 80 -w /tmp/xxx.cap
 抓取所有经过网卡1，目的主机为172.16.7.206的端口80的网络数据并存储
 
-# git命令
+# 查看软中断
 
-设置用户名，密码，邮箱：
+cat /proc/softirqs
 
-```
-全局设置，一次就行
-git config --global user.name "adce"
-git config --global user.email "adce@qq.com"
-```
+查看变化速率：
 
-```
+watch -d cat /proc/softirqs
 
-新建仓库
+Linux 中的软中断包括网络收发、定时、调度、RCU 锁等各种类型，可以通过查看 /proc/softirqs 来观察软中断的累计中断次数情况，如果要实时查看中断次数的变化率，可以使用 watch -d cat /proc/softirqs 命令。
 
-mkdir test
-cd test
-git init 
-touch README.md
-git add README.md
-git commit -m "first commit"
-git remote add origin https://gitee.com/adce9/test.git
-git push -u origin "master"
-```
+# 查看网卡的网络包接收速率情况
 
-```
+sar -n DEV
 
-已有仓库
+# 启动redis
 
-cd existing_git_repo
-git remote add origin https://gitee.com/adce9/test.git
-git push -u origin "master"
-```
+systemctl start redis.service
 
-git回滚
-
-git reflog 查看回滚的版本
-
-git reset --hard 93c7150 回滚到具体的版本号
-
-
-vscode发布到GitHub超时，使用全局代理：
-
-```
-git config --global https.proxy [http://127.0.0.1:1080](http://127.0.0.1:1080/)
- 
-git config --global https.proxy [https://127.0.0.1:1080](https://127.0.0.1:1080/)
-```
-
-
-取消代理：
-
-```
-git config --global --unset http.proxy
- 
-git config --global --unset https.proxy
-```
-
-
+redis-cli
 
 # shell脚本
 
